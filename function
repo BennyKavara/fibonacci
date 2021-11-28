@@ -1,0 +1,15 @@
+def fibonacci(n, memo = {}):
+    if n == 1 or n == 2:
+        return 1
+    if n not in memo:
+        memo[n] = fibonacci(n-1,memo) + fibonacci(n-2,memo)
+    return memo[n]
+
+def main():
+    n = input("What number of the fibonacci sequence would you like to calculate?")
+    print(fibonacci(int(n)))
+    
+if __name__ == "__main__": 
+    main()
+    
+    
